@@ -11,4 +11,14 @@
     <string name="pizzaJ7"> Pizzéria Forte Jedlíkova 7</string>
     <string name="libresso"> Libresso, Němcovej 7</string>
     <string name="chooseCanteen"> Vyberte si jedáleň</string>
+    <string name="full_name">Johny Ive</string>
+    <string name="email">Email</string>
+    <string name="user_email">example@student.tuke.sk</string>
+    <string name="phone">Phone</string>
+    <string name="user_phone">+421987654321</string>
+    <string name="room">Room</string>
+    <string name="balance_button">Balance</string>
+    <string name="amount">3.07 €</string>
+    <string name="booking">História objednávok</string>
+    <string name="room_num">Jedlikova 5 : 001A</string>
 </resources>
