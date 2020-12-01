@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name"> My Application</string>
+    <string name="nemc1"> Jedáleň Němcovej 1</string>
+    <string name="j7"> Jedáleň Jedlíkova 7</string>
+    <string name="bistroUr2"> Bistro Urbánkova 2</string>
+    <string name="bistroN9"> Bistro ZP, Němcovej 9</string>
+    <string name="bistroN32"> Bistro Němcovej 32</string>
+    <string name="vysokosk4"> Jedáleň Vysokoškolská 4</string>
+    <string name="UVP"> UVP Technikom, Němcovej 5</string>
+    <string name="bud31Presov"> Jedáleň Budovateľská 31, Prešov</string>
+    <string name="pizzaJ7"> Pizzéria Forte Jedlíkova 7</string>
+    <string name="libresso"> Libresso, Němcovej 7</string>
+    <string name="chooseCanteen"> Vyberte si jedáleň</string>
 </resources>
