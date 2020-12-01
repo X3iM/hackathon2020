@@ -5,61 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProfileActivity">
+    tools:context=".activities.ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
-        android:orientation="vertical"
+        android:background="@drawable/bg_top"
         android:gravity="center_horizontal"
-        android:background="@drawable/bg_top">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/profile" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/full_name"
-        style="@style/TextName"
-        />
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            style="@style/TextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/full_name" />
+
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="-25dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginStart="80dp"
         android:background="@drawable/bg_button_rounded">
+
         <TextView
+            style="@style/TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/balance_button"
-            android:textSize="20sp"
-            style="@style/TextButton"
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
+            android:text="@string/balance_button"
             android:textColor="@android:color/white"
-            />
+            android:textSize="20sp" />
+
         <TextView
+            style="@style/TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="@string/amount"
-            android:textSize="20sp"
-            style="@style/TextButton"
-            android:layout_marginEnd="30dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/amount"
             android:textColor="@android:color/white"
-            />
+            android:textSize="20sp" />
 
 
     </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -67,15 +70,17 @@
         android:orientation="vertical"
         android:paddingStart="40dp"
         android:paddingTop="40dp">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_email_24"/>
+                android:src="@drawable/ic_baseline_email_24" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,15 +88,16 @@
                 android:paddingStart="5dp">
 
                 <TextView
+                    style="@style/TextBlackTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/email"
-                    style="@style/TextBlackTitle"/>
+                    android:text="@string/email" />
+
                 <TextView
+                    style="@style/TextDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_email"
-                    style="@style/TextDescription"/>
+                    android:text="@string/user_email" />
 
             </LinearLayout>
 
@@ -102,10 +108,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="20dp">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_local_phone_24"/>
+                android:src="@drawable/ic_baseline_local_phone_24" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,15 +121,16 @@
                 android:paddingStart="5dp">
 
                 <TextView
+                    style="@style/TextBlackTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/phone"
-                    style="@style/TextBlackTitle"/>
+                    android:text="@string/phone" />
+
                 <TextView
+                    style="@style/TextDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_phone"
-                    style="@style/TextDescription"/>
+                    android:text="@string/user_phone" />
 
             </LinearLayout>
 
@@ -132,10 +141,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="20dp">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_home_24"/>
+                android:src="@drawable/ic_baseline_home_24" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,49 +154,47 @@
                 android:paddingStart="5dp">
 
                 <TextView
+                    style="@style/TextBlackTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/room"
-                    style="@style/TextBlackTitle"/>
+                    android:text="@string/room" />
+
                 <TextView
+                    style="@style/TextDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/room_num"
-                    style="@style/TextDescription"/>
+                    android:text="@string/room_num" />
 
             </LinearLayout>
 
         </LinearLayout>
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginStart="0dp"
-            android:gravity="center"
-            android:background="@drawable/bg_button_rounded">
+            android:background="@drawable/bg_button_rounded"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:paddingStart="20dp"
-                android:src="@drawable/ic_baseline_format_list_bulleted_24"
-                />
+                android:src="@drawable/ic_baseline_format_list_bulleted_24" />
 
             <TextView
+                style="@style/TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/booking"
-                style="@style/TextButton"
                 android:layout_gravity="center"
-                android:textSize="20sp"
-                />
+                android:text="@string/booking"
+                android:textSize="20sp" />
         </FrameLayout>
 
 
-
     </LinearLayout>
-
-
 
 
 </LinearLayout>

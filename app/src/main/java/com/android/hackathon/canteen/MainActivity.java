@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.android.hackathon.canteen.database.DatabaseController;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        DatabaseController.INSTANCE.makeRequest();
     }
 }
