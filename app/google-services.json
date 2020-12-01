@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "424066060561",
+    "firebase_url": "https://myunicanteen-2015b.firebaseio.com",
+    "project_id": "myunicanteen-2015b",
+    "storage_bucket": "myunicanteen-2015b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424066060561:android:71f00657f0b5f587aabcb0",
+        "android_client_info": {
+          "package_name": "com.android.hackathon.canteen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424066060561-lg6ea18ffjf7ejfmipl34mf4hlq6vk16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOZT2T2GPaip25yV1fkTYklN_SRWhLMkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424066060561-lg6ea18ffjf7ejfmipl34mf4hlq6vk16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
