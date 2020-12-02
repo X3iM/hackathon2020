@@ -1,4 +1,4 @@
-package com.android.hackathon.canteen.database
+package com.android.hackathon.canteen.database.model
 
 data class User(
         var id: String,
@@ -7,5 +7,5 @@ data class User(
         var email: String,
         var phone: String,
         var room: String,
-        var orderHistory: List<Food>
+        var orderHistory: List<Food>?
 )

@@ -1,4 +1,4 @@
-package com.android.hackathon.canteen.database
+package com.android.hackathon.canteen.database.model
 
 data class Food(
         var id: String,

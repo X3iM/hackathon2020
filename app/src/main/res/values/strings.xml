@@ -21,4 +21,7 @@
     <string name="amount">3.07 €</string>
     <string name="booking">História objednávok</string>
     <string name="room_num">Jedlikova 5 : 001A</string>
+    <string name="kcalString">Obsah kalórií v 100 gramoch: </string>
+    <string name="btn_add">Objednat</string>
+
 </resources>

@@ -1,163 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".MainActivity">
 
-
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_activity_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:fontFamily="@font/ubuntu_medium"
-            android:gravity="center_horizontal"
-            android:text="@string/chooseCanteen"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-
-
-        <Button
-            android:id="@+id/nemc1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/nemc1"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/j7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/j7"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/bistroUr2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/bistroUr2"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/bistroN9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/bistroN9"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/bistroN32"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/bistroN32"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/vysokosk4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/vysokosk4"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/UVP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/UVP"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/bud31Presov"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/bud31Presov"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"
-            />
-
-
-        <Button
-            android:id="@+id/pizzaJ7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/pizzaJ7"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"/>
-
-        <Button
-            android:id="@+id/libresso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:gravity="left|center_vertical"
-            android:text="@string/libresso"
-            android:textSize="21sp"
-            android:background="@drawable/btn_background"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/ubuntu"
-            android:drawableLeft="@drawable/btn_canteen_icon"
-            />
-    </LinearLayout>
-
-</ScrollView>
+</RelativeLayout>
