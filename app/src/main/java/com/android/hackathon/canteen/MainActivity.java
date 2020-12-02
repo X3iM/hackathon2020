@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         List<Canteen> canteenList = new ArrayList<>();
         canteenList.add(new Canteen("id1", "Jedlikova 5"));
         canteenList.add(new Canteen("id2", "Neviem aka 5"));
+        canteenList.add(new Canteen("id3", "Neviem aka 6"));
+        canteenList.add(new Canteen("id4", "Neviem aka 7"));
+        canteenList.add(new Canteen("id5", "Neviem aka 8"));
+        canteenList.add(new Canteen("id6", "Neviem aka 9"));
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
