@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="20dp"
     android:layout_margin="10dp"
-    android:background="@drawable/btn_background" >
+    app:cardBackgroundColor="@color/light_gray"
+    android:layout_gravity="center_horizontal">
 
     <TextView
         android:id="@+id/main_activity_canteen_name"

@@ -21,8 +21,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         //Просто проверял как выглядит активити
-       lstFood = new ArrayList<>();
-       lstFood.add(new Food("The Vegetarian","Categories","Description", 2.33,R.drawable.tomato ));
+        lstFood = new ArrayList<>();
+        lstFood.add(new Food("The Vegetarian","Categories","Description", 2.33,R.drawable.tomato ));
         lstFood.add(new Food("Soup","Categories","Description",2.40, R.drawable.chorizo ));
         lstFood.add(new Food("Hamburger","Categories","Description",3.00,R.drawable.num1 ));
         lstFood.add(new Food("The Vegetarian","Categories","Description", 2.30,R.drawable.tomato ));
