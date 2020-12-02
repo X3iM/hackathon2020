@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import com.android.hackathon.canteen.R;
 import com.android.hackathon.canteen.activities.adapter.Food;
-import com.android.hackathon.canteen.activities.adapter.RecyclerViewAdapter;
+import com.android.hackathon.canteen.activities.adapter.RecyclerViewAdapterMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
-        RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this,lstFood);
+        RecyclerViewAdapterMenu myAdapter = new RecyclerViewAdapterMenu(this,lstFood);
         myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
     }

@@ -14,12 +14,12 @@ import com.android.hackathon.canteen.R;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAdapterMenu.MyViewHolder> {
 
     private Context mContext;
     private List<Food> mData;
 
-    public RecyclerViewAdapter(Context mContext, List<Food> mData) {
+    public RecyclerViewAdapterMenu(Context mContext, List<Food> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
