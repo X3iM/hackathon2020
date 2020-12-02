@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name"> My Application</string>
     <string name="nemc1"> Jedáleň Němcovej 1</string>
     <string name="j7"> Jedáleň Jedlíkova 7</string>
     <string name="bistroUr2"> Bistro Urbánkova 2</string>
@@ -23,5 +22,7 @@
     <string name="room_num">Jedlikova 5 : 001A</string>
     <string name="kcalString">Obsah kalórií v 100 gramoch: </string>
     <string name="btn_add">Objednat</string>
+    <string name="app_name">TUKE Jedalne</string>
+    <string name="btn_register">Zaregistrovat sa</string>
 
 </resources>
