@@ -1,13 +1,22 @@
 package com.android.hackathon.canteen.database.model
 
-data class Food(
+class Food(
         var id: String,
         var name: String,
         var image: String,
         var description: String,
         var price: String,
-        var protein: Int,
+        protein: String,
         var kcal: Int,
-        var fats: Int,
-        var carbohydrates: Int,
-)
+        fats: String,
+        carbohydrates: String,
+) {
+    var protein = protein
+        get() = "$field%"
+
+    var fats = fats
+        get() = "$field%"
+
+    var carbohydrates = carbohydrates
+        get() = "$field%"
+}

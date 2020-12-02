@@ -38,7 +38,7 @@ public class DishActivity extends AppCompatActivity {
 
         dishes = new Food("id1", "Rezen", "https://webstockreview.net/images/crab-clipart-crusty-15.png", "Tento šalát sa skladá z avokáda, zelene,\n" +
                 " papriky, paradajok, tofu, cíceru a vodného melónu.", "5$",
-                40, 400, 40, 20);
+                "40", 400, "40", "20");
 
 
 
