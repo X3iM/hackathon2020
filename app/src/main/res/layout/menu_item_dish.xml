@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="150dp"
     android:layout_height="230dp"
-    android:layout_margin="20dp"
+    android:elevation="10dp"
+    app:cardElevation="20dp"
+    android:id="@+id/cardview_id"
     android:foreground="?android:attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
     app:cardCornerRadius="8dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/light_gray"
         android:orientation="vertical">
+    
+    <ImageView
+        android:id="@+id/food_img_id"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:background="#2d2d2d"/>
+    <TextView
+        android:id="@+id/food_title_id"
+        android:textColor="#2d2d2d"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:text="Food Tile"/>
+    <TextView
+        android:id="@+id/food_title_price"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#FA4A0C"
+        android:text="Food Price"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
 
-        <ImageView
-            android:id="@+id/food_img_id"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="#2d2d2d"
-            android:scaleType="centerCrop" />
 
-        <TextView
-            android:id="@+id/food_title_id"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="Food Tile"
-            android:textColor="#2d2d2d"
-            android:textSize="13sp" />
 
-        <TextView
-            android:id="@+id/food_title_price"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Food Price"
-            android:textColor="#FA4A0C"
-            android:textSize="20sp" />
 
 
     </LinearLayout>
+    
 
 
 </androidx.cardview.widget.CardView>
