@@ -45,5 +45,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
 
+        DatabaseController.INSTANCE.makeRequest();
+
     }
 }
