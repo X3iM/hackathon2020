@@ -42,7 +42,7 @@ public class BasketActivity extends AppCompatActivity
 
         RecyclerView myrv = (RecyclerView) findViewById(R.id.basket_activity_recycler_view);
         RecyclerViewAdapterBasket myAdapter = new RecyclerViewAdapterBasket(this,lstFood);
-        myrv.setLayoutManager(new GridLayoutManager(this,2));
+        myrv.setLayoutManager(new GridLayoutManager(this,1));
         myrv.setAdapter(myAdapter);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
