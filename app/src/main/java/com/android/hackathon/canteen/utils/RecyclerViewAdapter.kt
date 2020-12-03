@@ -30,7 +30,7 @@ open class RecyclerViewAdapter(var canteenList: List<Canteen>, var context: Cont
         viewHolder.bind(canteen)
         viewHolder.itemView.setOnClickListener {
             Log.d("onClick", canteen.id)
-            var intent = Intent(context, ProfileActivity::class.java)
+            var intent = Intent(context, MenuActivity::class.java)
             intent.putExtra("canteenId", canteen.name)
             context.startActivity(intent)
         }
