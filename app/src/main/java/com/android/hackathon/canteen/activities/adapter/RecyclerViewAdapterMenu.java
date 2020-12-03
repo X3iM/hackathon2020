@@ -53,9 +53,6 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
             }
         });
 
-
-
-
     }
 
     @Override
@@ -72,11 +69,11 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-
             tv_food_title = (TextView)itemView.findViewById(R.id.food_item_name);
             img_food_thumbnail = (ImageView)itemView.findViewById(R.id.food_item_img);
             tv_food_price=(TextView)itemView.findViewById(R.id.food_item_price);
             cardView=(CardView)itemView.findViewById(R.id.cardview_id);
         }
     }
+
 }

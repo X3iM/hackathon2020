@@ -43,7 +43,7 @@ open class RecyclerViewAdapter(var canteenList: List<Canteen>, var context: Cont
 
         fun bind(canteen: Canteen) {
             currentCanteen = canteen
-            Log.d("bind", "bind item")
+//            Log.d("bind", "bind item")
             textView.text = canteen.name
         }
 

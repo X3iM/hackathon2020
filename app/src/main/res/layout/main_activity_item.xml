@@ -15,6 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="26sp"
+        style="@style/TextName"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
         android:text="text"/>
 
 </androidx.cardview.widget.CardView>
