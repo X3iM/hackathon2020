@@ -7,12 +7,24 @@
     android:orientation="vertical"
     tools:context=".activities.MenuActivity">
 
+    <TextView
+        android:id="@+id/menu_canteen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="text"
+        android:textStyle="bold"
+        style="@style/TextName"
+        android:textColor="@color/gray"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation"
-        android:scrollbars="none"/>
+        android:layout_below="@+id/menu_canteen_name"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
