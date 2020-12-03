@@ -5,8 +5,8 @@
     android:layout_height="64dp"
     android:layout_width="382dp"
     android:id="@+id/basket_item"
+    android:layout_marginVertical="15dp"
     android:layout_gravity="center_horizontal"
-    android:layout_marginVertical="10dp"
     app:cardCornerRadius="8dp"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -39,12 +39,22 @@
             android:textColor="#FA4A0C"
             android:text="TextView" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="35dp"
+        <ImageButton
+            android:id="@+id/basket_button_delete"
+            android:layout_width="52dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/_removebg_preview__1_" />
+
+<!--        <Button-->
+<!--            android:id="@+id/basket_button_delete"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            -->
+<!--            android:text="Button" />-->
 
     </LinearLayout>
 
