@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 
 import com.android.hackathon.canteen.activities.BasketActivity;
 import com.android.hackathon.canteen.activities.MenuActivity;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
         List<Canteen> canteenList = DatabaseController.INSTANCE.addCanteen();
 
-//        if (canteenList.size() == 0)
-            (new Handler()).postDelayed(this::function, 1000);
-
+        progressBar = findViewById(R.id.progress_bar_main_activity);
+        progressBar.setVisibility(View.VISIBLE);
         recyclerView = findViewById(R.id.main_activity_recycler_view);
         recyclerView.setHasFixedSize(true);
+        recyclerView.setVisibility(View.GONE);
         adapter = new RecyclerViewAdapter(canteenList, this);
+
+        if (canteenList.size() == 0)
+            (new Handler()).postDelayed(this::function, 1500);
+        else {
+            progressBar.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+        }
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setAdapter(adapter);
@@ -83,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void function() {
         adapter.notifyDataSetChanged();
+        recyclerView.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.GONE);
     }
 
 }
