@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,6 +53,14 @@ public class RecyclerViewAdapterBasket extends RecyclerView.Adapter<RecyclerView
                 mContext.startActivity(intent);
             }
         });
+        holder.button_delete.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+//                ListsDatabaseList theRemovedItem = list.get(position);
+                // remove your item from data base
+                mData.remove(position);  // remove the item from list
+                notifyItemRemoved(position); // notify the adapter about the removed item
+            }
+        });
     }
 
     @Override
@@ -63,6 +73,7 @@ public class RecyclerViewAdapterBasket extends RecyclerView.Adapter<RecyclerView
         TextView tv_food_title;
         ImageView img_food_thumbnail;
         TextView tv_food_price;
+        ImageButton button_delete;
         CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -72,6 +83,7 @@ public class RecyclerViewAdapterBasket extends RecyclerView.Adapter<RecyclerView
             tv_food_title = (TextView)itemView.findViewById(R.id.basket_activity_title);
             img_food_thumbnail = (ImageView)itemView.findViewById(R.id.basket_activity_picture);
             tv_food_price=(TextView)itemView.findViewById(R.id.basket_activity_price);
+            button_delete=(ImageButton) itemView.findViewById(R.id.basket_button_delete);
             cardView=(CardView)itemView.findViewById(R.id.basket_item);
         }
     }
