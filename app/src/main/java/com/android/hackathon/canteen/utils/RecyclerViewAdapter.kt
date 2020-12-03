@@ -17,6 +17,7 @@ open class RecyclerViewAdapter(var canteenList: List<Canteen>,
                                var context: Context) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
+        canteenList.forEach { v -> Log.d("canteenList", "$v")}
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.main_activity_item, viewGroup, false)
 
         return ViewHolder(view)
