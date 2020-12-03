@@ -63,10 +63,6 @@ public class BasketActivity extends AppCompatActivity
                         return true;
                     case R.id.cart:
                         return true;
-                    case R.id.history:
-                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
                 }
                 return false;
             }

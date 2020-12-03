@@ -47,7 +47,7 @@ public class MenuActivity extends AppCompatActivity {
         myrv.setAdapter(myAdapter);
         //NavigationBar
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.history);
+        bottomNavigationView.setSelectedItemId(R.id.cart);
 
         setupBottomNav();
     }
@@ -68,8 +68,6 @@ public class MenuActivity extends AppCompatActivity {
                     case R.id.cart:
                         startActivity(new Intent(getApplicationContext(), BasketActivity.class));
                         overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.history:
                         return true;
                 }
                 return false;

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     tools:context=".activities.DishActivity">
 
 
@@ -125,10 +124,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/price"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_add_background"
         android:text="@string/btn_add"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:layout_above="@id/bottom_navigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

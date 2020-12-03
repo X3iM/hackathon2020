@@ -25,7 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
 //NavigationBar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.profile);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -36,10 +36,6 @@ public class ProfileActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.profile:
-                        return true;
-                    case R.id.history:
-                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
-                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.cart:
                         startActivity(new Intent(getApplicationContext(), BasketActivity.class));

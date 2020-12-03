@@ -76,10 +76,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.history:
-                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
-                        overridePendingTransition(0, 0);
-                        return true;
                     case R.id.cart:
                         startActivity(new Intent(getApplicationContext(), BasketActivity.class));
                         overridePendingTransition(0, 0);
