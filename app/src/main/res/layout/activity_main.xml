@@ -17,7 +17,7 @@
         android:layout_alignParentEnd="true"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
-        android:text="Vyber si jedalen"
+        android:text="Choose canteen"
         style="@style/TextName"
         android:textStyle="bold"
         android:textColor="@color/gray"
