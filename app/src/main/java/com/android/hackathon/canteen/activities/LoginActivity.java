@@ -1,6 +1,7 @@
 
 package com.android.hackathon.canteen.activities;
 
+//import com.android.hackathon.canteen.MainActivity;
 import com.android.hackathon.canteen.MainActivity;
 import com.android.hackathon.canteen.R;
 
@@ -37,15 +38,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         passwords = (EditText) findViewById(R.id.password);
 
         findViewById(R.id.login_btn).setOnClickListener(this);
-        findViewById(R.id.registr_btn).setOnClickListener(this);
+     //   findViewById(R.id.registr_btn).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.login_btn) {
             signin(emails.getText().toString(), passwords.getText().toString());
-        } else if (view.getId() == R.id.registr_btn) {
-            registration(emails.getText().toString(), passwords.getText().toString());
+       } else if(view.getId()==R.id.createBtn)
+        {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         }
 
     }
@@ -56,8 +59,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(LoginActivity.this, "Authorization successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                    startActivity(intent);
                 } else
                     Toast.makeText(LoginActivity.this, "Authorization failed", Toast.LENGTH_SHORT).show();
 
@@ -65,19 +68,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
     }
 
-    public void registration(String email, String password) {
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(LoginActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                } else
-                    Toast.makeText(LoginActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    public void registration(String email, String password) {
+//        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//            @Override
+//            public void onComplete(@NonNull Task<AuthResult> task) {
+//                if (task.isSuccessful()) {
+//                    Toast.makeText(LoginActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                    startActivity(intent);
+//                } else
+//                    Toast.makeText(LoginActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
     @Override
     protected void onStart() {
