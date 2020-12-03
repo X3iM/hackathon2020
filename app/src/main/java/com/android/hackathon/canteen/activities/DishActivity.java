@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,6 +37,7 @@ public class DishActivity extends AppCompatActivity {
     private TextView fats;
     private TextView carbonohydrates;
     private TextView kcal;
+    private Button order;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +58,7 @@ public class DishActivity extends AppCompatActivity {
         fats=(TextView)findViewById(R.id.fats);
         carbonohydrates=(TextView)findViewById(R.id.carbonohydrates);
         kcal=(TextView)findViewById(R.id.kcal);
+        order=(Button)findViewById(R.id.order);
 
 
 
@@ -68,7 +72,12 @@ public class DishActivity extends AppCompatActivity {
         kcal.setText(String.valueOf(dishes.getKcal()));
 
 
-
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DishActivity.this, LoginActivity.class));
+            }
+        });
 
         //NavigationBar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
