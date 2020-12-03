@@ -56,6 +56,7 @@ public class MenuActivity extends AppCompatActivity {
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         overridePendingTransition(0, 0);
+                        return true;
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0, 0);
@@ -66,6 +67,7 @@ public class MenuActivity extends AppCompatActivity {
                 return false;
             }
         });
+// NavigationBar
     }
 
 }
