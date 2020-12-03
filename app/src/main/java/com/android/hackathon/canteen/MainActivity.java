@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
@@ -33,14 +34,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        List<Canteen> canteenList = DatabaseController.INSTANCE.addCanteen();
+        List<Canteen> canteenList = DatabaseController.INSTANCE.addCanteen();
+
+        (new Handler()).postDelayed(this::function, 1000);
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerView = findViewById(R.id.main_activity_recycler_view);
         recyclerView.setHasFixedSize(true);
-        adapter = new RecyclerViewAdapter( this);
+        adapter = new RecyclerViewAdapter(canteenList, this);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setAdapter(adapter);
@@ -73,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 // NavigationBar
+    }
+
+    private void function() {
+        adapter.notifyDataSetChanged();
     }
 
 }

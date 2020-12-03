@@ -14,9 +14,7 @@ import com.android.hackathon.canteen.activities.ProfileActivity
 import com.android.hackathon.canteen.database.DatabaseController
 import com.android.hackathon.canteen.database.model.Canteen
 
-open class RecyclerViewAdapter(var context: Context) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
-
-    var canteenList = DatabaseController.addCanteen()
+open class RecyclerViewAdapter(var canteenList: List<Canteen>, var context: Context) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
 //        canteenList.forEach { v -> Log.d("canteenList", "$v")}
@@ -26,7 +24,7 @@ open class RecyclerViewAdapter(var context: Context) : RecyclerView.Adapter<Recy
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        canteenList = DatabaseController.addCanteen()
+//        canteenList = DatabaseController.addCanteen()
         val canteen = canteenList[position]
 
         viewHolder.bind(canteen)
