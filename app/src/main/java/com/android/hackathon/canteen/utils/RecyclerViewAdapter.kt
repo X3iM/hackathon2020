@@ -26,8 +26,9 @@ open class RecyclerViewAdapter(var context: Context) : RecyclerView.Adapter<Recy
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        canteenList = DatabaseController.addCanteen()
         val canteen = canteenList[position]
-        
+
         viewHolder.bind(canteen)
         viewHolder.itemView.setOnClickListener {
             Log.d("onClick", canteen.id)
