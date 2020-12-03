@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_above="@id/bottom_navigation"
+    android:orientation="vertical"
     tools:context=".activities.ProfileActivity">
 
     <LinearLayout
@@ -194,14 +194,15 @@
                 android:textSize="20sp" />
         </FrameLayout>
     </LinearLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        app:labelVisibilityMode="unlabeled"
-        android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:itemBackground="@color/white"
-        app:itemTextColor="@color/bottom_nav_color"
         app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/menu_navigation" />
 
 

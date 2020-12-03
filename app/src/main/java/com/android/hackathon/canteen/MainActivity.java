@@ -36,10 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         List<Canteen> canteenList = DatabaseController.INSTANCE.addCanteen();
 
-        (new Handler()).postDelayed(this::function, 1000);
-
-        Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        if (canteenList.size() == 0)
+            (new Handler()).postDelayed(this::function, 1000);
 
         recyclerView = findViewById(R.id.main_activity_recycler_view);
         recyclerView.setHasFixedSize(true);

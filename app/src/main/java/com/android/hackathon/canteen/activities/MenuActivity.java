@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.android.hackathon.canteen.MainActivity;
 import com.android.hackathon.canteen.R;
+
 
 import com.android.hackathon.canteen.activities.adapter.RecyclerViewAdapterMenu;
 import com.android.hackathon.canteen.database.model.Food;
@@ -19,10 +24,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MenuActivity extends AppCompatActivity {
 
-
-    List<Food> lstFood;
+    private List<Food> lstFood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +45,11 @@ public class MenuActivity extends AppCompatActivity {
         lstFood.add(new Food("1", "The Vegetarian", "https://firebasestorage.googleapis.com/v0/b/myunicanteen-2015b.appspot.com/o/chorizo.jpg?alt=media&token=0d64d905-8647-46ca-8a90-5d60ebc03954", "Description", "$2", "2", 2, "2", "2"));
 
 
-        RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
-        RecyclerViewAdapterMenu myAdapter = new RecyclerViewAdapterMenu(this, lstFood);
-        myrv.setLayoutManager(new GridLayoutManager(this, 2));
-        myrv.setAdapter(myAdapter);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview_id);
+        RecyclerViewAdapterMenu menuAdapter = new RecyclerViewAdapterMenu(getApplicationContext(), lstFood);
+
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setAdapter(menuAdapter);
         //NavigationBar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
