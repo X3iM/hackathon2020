@@ -27,27 +27,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Canteen> canteenList = DatabaseController.INSTANCE.addCanteen();
-
+//        List<Canteen> canteenList = DatabaseController.INSTANCE.addCanteen();
 
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         recyclerView = findViewById(R.id.main_activity_recycler_view);
         recyclerView.setHasFixedSize(true);
-        adapter = new RecyclerViewAdapter(canteenList, this);
+        adapter = new RecyclerViewAdapter( this);
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
 
-        try {
-            Thread.sleep(1000L);
-            Log.d("THREAD", "sleep");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        adapter.setCanteenList(canteenList);
         adapter.notifyDataSetChanged();
     }
+
 }

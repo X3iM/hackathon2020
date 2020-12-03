@@ -16,6 +16,7 @@ object DatabaseController {
     }
 
     fun addCanteen(): List<Canteen> {
+        canteenList.clear()
         databaseReference = FirebaseDatabase.getInstance().reference.child("canteen")
 //        databaseReference.push().setValue(Canteen(id="1", name="Němcovej 1"))
 //        databaseReference.push().setValue(Canteen(id="2", name="Jedlíkova 7"))

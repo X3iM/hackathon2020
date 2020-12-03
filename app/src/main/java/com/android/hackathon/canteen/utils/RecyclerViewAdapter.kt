@@ -11,13 +11,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.hackathon.canteen.R
 import com.android.hackathon.canteen.activities.MenuActivity
 import com.android.hackathon.canteen.activities.ProfileActivity
+import com.android.hackathon.canteen.database.DatabaseController
 import com.android.hackathon.canteen.database.model.Canteen
 
-open class RecyclerViewAdapter(var canteenList: List<Canteen>,
-                               var context: Context) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+open class RecyclerViewAdapter(var context: Context) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+
+    var canteenList = DatabaseController.addCanteen()
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        canteenList.forEach { v -> Log.d("canteenList", "$v")}
+//        canteenList.forEach { v -> Log.d("canteenList", "$v")}
         val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.main_activity_item, viewGroup, false)
 
         return ViewHolder(view)
