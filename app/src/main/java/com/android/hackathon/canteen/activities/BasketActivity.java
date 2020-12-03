@@ -47,7 +47,7 @@ public class BasketActivity extends AppCompatActivity
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.history);
+        bottomNavigationView.setSelectedItemId(R.id.cart);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -62,10 +62,10 @@ public class BasketActivity extends AppCompatActivity
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.cart:
-                        startActivity(new Intent(getApplicationContext(), BasketActivity.class));
-                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.history:
+                        startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
                 return false;

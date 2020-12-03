@@ -73,7 +73,7 @@ public class DishActivity extends AppCompatActivity {
         //NavigationBar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.profile);
+        bottomNavigationView.setSelectedItemId(R.id.history);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -90,6 +90,8 @@ public class DishActivity extends AppCompatActivity {
                     case R.id.history:
                         startActivity(new Intent(getApplicationContext(), MenuActivity.class));
                         overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cart:
                         return true;
                 }
                 return false;

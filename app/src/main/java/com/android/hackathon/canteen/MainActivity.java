@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.android.hackathon.canteen.activities.BasketActivity;
 import com.android.hackathon.canteen.activities.MenuActivity;
 import com.android.hackathon.canteen.activities.ProfileActivity;
 import com.android.hackathon.canteen.database.DatabaseController;
@@ -67,6 +68,10 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.history:
                         startActivity(new Intent(getApplicationContext(), MenuActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.cart:
+                        startActivity(new Intent(getApplicationContext(), BasketActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                 }

@@ -61,6 +61,10 @@ public class MenuActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
+                    case R.id.cart:
+                        startActivity(new Intent(getApplicationContext(), BasketActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                     case R.id.history:
                         return true;
                 }
