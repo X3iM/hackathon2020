@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_above="@id/bottom_navigation"
     tools:context=".activities.ProfileActivity">
 
     <LinearLayout
@@ -16,16 +17,16 @@
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/profile" />
 
         <TextView
             style="@style/TextName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:text="@string/full_name" />
 
     </LinearLayout>
@@ -173,7 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="40dp"
             android:background="@drawable/bg_button_rounded"
             android:gravity="center">
