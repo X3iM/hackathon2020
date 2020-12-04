@@ -38,6 +38,7 @@ public class DishActivity extends AppCompatActivity {
     private TextView carbonohydrates;
     private TextView kcal;
     private Button order;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +61,11 @@ public class DishActivity extends AppCompatActivity {
         kcal=(TextView)findViewById(R.id.kcal);
         order=(Button)findViewById(R.id.order);
 
+        Intent intent = getIntent();
+        if (intent != null) {
+            intent.getStringExtra();
+            dishes = new Food();
+        }
 
 
         Picasso.get().load(dishes.getImage()).into(image);
