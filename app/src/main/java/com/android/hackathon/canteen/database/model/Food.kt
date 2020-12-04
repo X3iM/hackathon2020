@@ -6,17 +6,17 @@ class Food(
         var image: String,
         var description: String,
         var price: String,
-        protein: String,
+        var protein: String,
         var kcal: Int,
-        fats: String,
-        carbohydrates: String,
+        var fats: String,
+        var carbohydrates: String,
 ) {
-    var protein = protein
-        get() = "$field%"
-
-    var fats = fats
-        get() = "$field%"
-
-    var carbohydrates = carbohydrates
-        get() = "$field%"
+//    var protein = protein
+//        get() = "$field%"
+//
+//    var fats = fats
+//        get() = "$field%"
+//
+//    var carbohydrates = carbohydrates
+//        get() = "$field%"
 }

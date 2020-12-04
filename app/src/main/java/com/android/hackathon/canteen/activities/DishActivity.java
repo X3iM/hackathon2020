@@ -45,7 +45,7 @@ public class DishActivity extends AppCompatActivity {
         setContentView(R.layout.dish);
 
         dishes = new Food("id1", "Rezen", "https://webstockreview.net/images/crab-clipart-crusty-15.png", "Tento šalát sa skladá z avokáda, zelene,\n" +
-                " papriky, paradajok, tofu, cíceru a vodného melónu.", "5$",
+                "papriky, paradajok, tofu, cíceru a vodného melónu.", "5$",
                 "40", 400, "40", "20");
 
 
@@ -59,12 +59,20 @@ public class DishActivity extends AppCompatActivity {
         fats=(TextView)findViewById(R.id.fats);
         carbonohydrates=(TextView)findViewById(R.id.carbonohydrates);
         kcal=(TextView)findViewById(R.id.kcal);
-        order=(Button)findViewById(R.id.order);
+//        order=(Button)findViewById(R.id.order);
 
         Intent intent = getIntent();
         if (intent != null) {
-            intent.getStringExtra();
-            dishes = new Food();
+            String id = intent.getStringExtra("id");
+            String name = intent.getStringExtra("name");
+            String description = intent.getStringExtra("description");
+            String image = intent.getStringExtra("image");
+            String carbohydrates = intent.getStringExtra("carbohydrates");
+            String fats = intent.getStringExtra("fats");
+            int kcal = intent.getIntExtra("kcal", 100);
+            String price = intent.getStringExtra("price");
+            String protein = intent.getStringExtra("protein");
+            dishes = new Food(id, name, image, description, price, protein, kcal, fats, carbohydrates);
         }
 
 
@@ -78,12 +86,12 @@ public class DishActivity extends AppCompatActivity {
         kcal.setText(String.valueOf(dishes.getKcal()));
 
 
-        order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DishActivity.this, LoginActivity.class));
-            }
-        });
+//        order.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(DishActivity.this, LoginActivity.class));
+//            }
+//        });
 
         //NavigationBar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

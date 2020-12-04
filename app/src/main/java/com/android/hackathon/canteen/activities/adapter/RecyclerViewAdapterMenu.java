@@ -48,7 +48,17 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Food food = mData.get(position);
                 Intent intent = new Intent(mContext, DishActivity.class);
+                intent.putExtra("id", food.getId());
+                intent.putExtra("name", food.getName());
+                intent.putExtra("description", food.getDescription());
+                intent.putExtra("image", food.getImage());
+                intent.putExtra("carbohydrates", food.getCarbohydrates());
+                intent.putExtra("fats", food.getFats());
+                intent.putExtra("kcal", food.getKcal());
+                intent.putExtra("price", food.getPrice());
+                intent.putExtra("protein", food.getProtein());
                 mContext.startActivity(intent);
             }
         });
