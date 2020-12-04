@@ -44,7 +44,7 @@ public class DishActivity extends AppCompatActivity {
         setContentView(R.layout.dish);
 
         dishes = new Food("id1", "Rezen", "https://webstockreview.net/images/crab-clipart-crusty-15.png", "Tento šalát sa skladá z avokáda, zelene,\n" +
-                " papriky, paradajok, tofu, cíceru a vodného melónu.", "5$",
+                "papriky, paradajok, tofu, cíceru a vodného melónu.", "5$",
                 "40", 400, "40", "20");
 
 
@@ -58,7 +58,7 @@ public class DishActivity extends AppCompatActivity {
         fats=(TextView)findViewById(R.id.fats);
         carbonohydrates=(TextView)findViewById(R.id.carbonohydrates);
         kcal=(TextView)findViewById(R.id.kcal);
-        order=(Button)findViewById(R.id.order);
+//        order=(Button)findViewById(R.id.order);
 
 
 
@@ -72,12 +72,12 @@ public class DishActivity extends AppCompatActivity {
         kcal.setText(String.valueOf(dishes.getKcal()));
 
 
-        order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DishActivity.this, LoginActivity.class));
-            }
-        });
+//        order.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(DishActivity.this, LoginActivity.class));
+//            }
+//        });
 
         //NavigationBar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
